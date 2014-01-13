@@ -10,6 +10,9 @@
 #import "PTNSecondViewController.h"
 #import "PTNDiscloseButtonViewController.h"
 #import "PTNCheckViewController.h"
+#import "PTNControlsViewController.h"
+#import "PTNMoveMeViewController.h"
+#import "PTNDeleteMeViewController.h"
 
 static NSString *CellIdentifier = @"Cell";
 
@@ -48,7 +51,11 @@ static NSString *CellIdentifier = @"Cell";
     
     PTNCheckViewController *checkController = [[PTNCheckViewController alloc] init];
     
-    self.controllers = @[discl,checkController];
+    self.controllers = @[discl,checkController,
+                         [[PTNControlsViewController alloc] init],
+                         [[PTNMoveMeViewController alloc] init],
+                         [[PTNDeleteMeViewController alloc] init]
+                         ];
 }
 
 - (void)didReceiveMemoryWarning

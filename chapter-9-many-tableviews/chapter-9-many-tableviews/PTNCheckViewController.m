@@ -64,7 +64,21 @@ static NSString *CellIdentifier = @"Cell";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"Yes");
     
-#warning need implement!!!
+    if (indexPath.row != self.selectedSnack) {
+        if (self.selectedSnack != NSNotFound) {
+            NSIndexPath *oldPath = [NSIndexPath indexPathForRow:self.selectedSnack inSection:0];
+            UITableViewCell *cell = [tableView cellForRowAtIndexPath:oldPath];
+            
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+        
+        UITableViewCell *cellSelected = [tableView cellForRowAtIndexPath:indexPath];
+        cellSelected.accessoryType = UITableViewCellAccessoryCheckmark;
+        self.selectedSnack = indexPath.row;
+        
+    }
+    
+    
 }
 
 
