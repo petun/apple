@@ -1,0 +1,18 @@
+//
+//  PTNSinglePickerViewController.h
+//  ch7
+//
+//  Created by Admin on 09.01.14.
+//  Copyright (c) 2014 Admin. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface PTNSinglePickerViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+
+
+@property (weak, nonatomic) IBOutlet UIPickerView *singlePicker;
+@property NSArray *pickerItems;
+- (IBAction)buttonPressed:(id)sender;
+
+@end

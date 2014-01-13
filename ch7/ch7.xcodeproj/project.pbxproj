@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84AAAEC8187EA47E00B563C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AAAEC7187EA47E00B563C5 /* Foundation.framework */; };
+		84AAAECA187EA47E00B563C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AAAEC9187EA47E00B563C5 /* CoreGraphics.framework */; };
+		84AAAECC187EA47E00B563C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AAAECB187EA47E00B563C5 /* UIKit.framework */; };
+		84AAAED2187EA47E00B563C5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84AAAED0187EA47E00B563C5 /* InfoPlist.strings */; };
+		84AAAED4187EA47E00B563C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AAAED3187EA47E00B563C5 /* main.m */; };
+		84AAAED8187EA47E00B563C5 /* PTNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AAAED7187EA47E00B563C5 /* PTNAppDelegate.m */; };
+		84AAAEDA187EA47E00B563C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84AAAED9187EA47E00B563C5 /* Images.xcassets */; };
+		84AAAEE1187EA47E00B563C5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AAAEE0187EA47E00B563C5 /* XCTest.framework */; };
+		84AAAEE2187EA47E00B563C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AAAEC7187EA47E00B563C5 /* Foundation.framework */; };
+		84AAAEE3187EA47E00B563C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AAAECB187EA47E00B563C5 /* UIKit.framework */; };
+		84AAAEEB187EA47E00B563C5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84AAAEE9187EA47E00B563C5 /* InfoPlist.strings */; };
+		84AAAEED187EA47E00B563C5 /* ch7Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AAAEEC187EA47E00B563C5 /* ch7Tests.m */; };
+		84AAAEF9187EA54C00B563C5 /* PTNDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AAAEF7187EA54B00B563C5 /* PTNDatePickerViewController.m */; };
+		84AAAEFA187EA54C00B563C5 /* PTNDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AAAEF8187EA54B00B563C5 /* PTNDatePickerViewController.xib */; };
+		84AAAEFE187EA57500B563C5 /* PTNSinglePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AAAEFC187EA57500B563C5 /* PTNSinglePickerViewController.m */; };
+		84AAAEFF187EA57500B563C5 /* PTNSinglePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AAAEFD187EA57500B563C5 /* PTNSinglePickerViewController.xib */; };
+		84AAAF01187EA6FD00B563C5 /* TabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AAAF00187EA6FD00B563C5 /* TabBarController.xib */; };
+		84AAAF05187EC96500B563C5 /* PTNDoublePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AAAF03187EC96500B563C5 /* PTNDoublePickerViewController.m */; };
+		84AAAF06187EC96500B563C5 /* PTNDoublePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AAAF04187EC96500B563C5 /* PTNDoublePickerViewController.xib */; };
+		84AAAF0A187FE90D00B563C5 /* PTNGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AAAF08187FE90D00B563C5 /* PTNGameViewController.m */; };
+		84AAAF0B187FE90D00B563C5 /* PTNGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AAAF09187FE90D00B563C5 /* PTNGameViewController.xib */; };
+		84AAAF12187FECD300B563C5 /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AAAF0C187FECD300B563C5 /* car.png */; };
+		84AAAF13187FECD300B563C5 /* caravan.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AAAF0D187FECD300B563C5 /* caravan.png */; };
+		84AAAF14187FECD300B563C5 /* card-in.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AAAF0E187FECD300B563C5 /* card-in.png */; };
+		84AAAF15187FECD300B563C5 /* caution.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AAAF0F187FECD300B563C5 /* caution.png */; };
+		84AAAF16187FECD300B563C5 /* cctv.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AAAF10187FECD300B563C5 /* cctv.png */; };
+		84AAAF17187FECD300B563C5 /* cemetery.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AAAF11187FECD300B563C5 /* cemetery.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84AAAEE4187EA47E00B563C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84AAAEBC187EA47E00B563C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84AAAEC3187EA47E00B563C5;
+			remoteInfo = ch7;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		84AAAEC4187EA47E00B563C5 /* ch7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ch7.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84AAAEC7187EA47E00B563C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		84AAAEC9187EA47E00B563C5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		84AAAECB187EA47E00B563C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		84AAAECF187EA47E00B563C5 /* ch7-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ch7-Info.plist"; sourceTree = "<group>"; };
+		84AAAED1187EA47E00B563C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84AAAED3187EA47E00B563C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84AAAED5187EA47E00B563C5 /* ch7-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ch7-Prefix.pch"; sourceTree = "<group>"; };
+		84AAAED6187EA47E00B563C5 /* PTNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTNAppDelegate.h; sourceTree = "<group>"; };
+		84AAAED7187EA47E00B563C5 /* PTNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTNAppDelegate.m; sourceTree = "<group>"; };
+		84AAAED9187EA47E00B563C5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		84AAAEDF187EA47E00B563C5 /* ch7Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ch7Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84AAAEE0187EA47E00B563C5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		84AAAEE8187EA47E00B563C5 /* ch7Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ch7Tests-Info.plist"; sourceTree = "<group>"; };
+		84AAAEEA187EA47E00B563C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84AAAEEC187EA47E00B563C5 /* ch7Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ch7Tests.m; sourceTree = "<group>"; };
+		84AAAEF6187EA54B00B563C5 /* PTNDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTNDatePickerViewController.h; path = ../PTNDatePickerViewController.h; sourceTree = "<group>"; };
+		84AAAEF7187EA54B00B563C5 /* PTNDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTNDatePickerViewController.m; path = ../PTNDatePickerViewController.m; sourceTree = "<group>"; };
+		84AAAEF8187EA54B00B563C5 /* PTNDatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PTNDatePickerViewController.xib; path = ../PTNDatePickerViewController.xib; sourceTree = "<group>"; };
+		84AAAEFB187EA57500B563C5 /* PTNSinglePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTNSinglePickerViewController.h; sourceTree = "<group>"; };
+		84AAAEFC187EA57500B563C5 /* PTNSinglePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNSinglePickerViewController.m; sourceTree = "<group>"; };
+		84AAAEFD187EA57500B563C5 /* PTNSinglePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTNSinglePickerViewController.xib; sourceTree = "<group>"; };
+		84AAAF00187EA6FD00B563C5 /* TabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarController.xib; sourceTree = "<group>"; };
+		84AAAF02187EC96500B563C5 /* PTNDoublePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTNDoublePickerViewController.h; sourceTree = "<group>"; };
+		84AAAF03187EC96500B563C5 /* PTNDoublePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNDoublePickerViewController.m; sourceTree = "<group>"; };
+		84AAAF04187EC96500B563C5 /* PTNDoublePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTNDoublePickerViewController.xib; sourceTree = "<group>"; };
+		84AAAF07187FE90D00B563C5 /* PTNGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTNGameViewController.h; sourceTree = "<group>"; };
+		84AAAF08187FE90D00B563C5 /* PTNGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNGameViewController.m; sourceTree = "<group>"; };
+		84AAAF09187FE90D00B563C5 /* PTNGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTNGameViewController.xib; sourceTree = "<group>"; };
+		84AAAF0C187FECD300B563C5 /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car.png; sourceTree = "<group>"; };
+		84AAAF0D187FECD300B563C5 /* caravan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = caravan.png; sourceTree = "<group>"; };
+		84AAAF0E187FECD300B563C5 /* card-in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card-in.png"; sourceTree = "<group>"; };
+		84AAAF0F187FECD300B563C5 /* caution.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = caution.png; sourceTree = "<group>"; };
+		84AAAF10187FECD300B563C5 /* cctv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cctv.png; sourceTree = "<group>"; };
+		84AAAF11187FECD300B563C5 /* cemetery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cemetery.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84AAAEC1187EA47E00B563C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84AAAECA187EA47E00B563C5 /* CoreGraphics.framework in Frameworks */,
+				84AAAECC187EA47E00B563C5 /* UIKit.framework in Frameworks */,
+				84AAAEC8187EA47E00B563C5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84AAAEDC187EA47E00B563C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84AAAEE1187EA47E00B563C5 /* XCTest.framework in Frameworks */,
+				84AAAEE3187EA47E00B563C5 /* UIKit.framework in Frameworks */,
+				84AAAEE2187EA47E00B563C5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84AAAEBB187EA47E00B563C5 = {
+			isa = PBXGroup;
+			children = (
+				84AAAECD187EA47E00B563C5 /* ch7 */,
+				84AAAEE6187EA47E00B563C5 /* ch7Tests */,
+				84AAAEC6187EA47E00B563C5 /* Frameworks */,
+				84AAAEC5187EA47E00B563C5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84AAAEC5187EA47E00B563C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84AAAEC4187EA47E00B563C5 /* ch7.app */,
+				84AAAEDF187EA47E00B563C5 /* ch7Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84AAAEC6187EA47E00B563C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84AAAEC7187EA47E00B563C5 /* Foundation.framework */,
+				84AAAEC9187EA47E00B563C5 /* CoreGraphics.framework */,
+				84AAAECB187EA47E00B563C5 /* UIKit.framework */,
+				84AAAEE0187EA47E00B563C5 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84AAAECD187EA47E00B563C5 /* ch7 */ = {
+			isa = PBXGroup;
+			children = (
+				84AAAF0C187FECD300B563C5 /* car.png */,
+				84AAAF0D187FECD300B563C5 /* caravan.png */,
+				84AAAF0E187FECD300B563C5 /* card-in.png */,
+				84AAAF0F187FECD300B563C5 /* caution.png */,
+				84AAAF10187FECD300B563C5 /* cctv.png */,
+				84AAAF11187FECD300B563C5 /* cemetery.png */,
+				84AAAEF6187EA54B00B563C5 /* PTNDatePickerViewController.h */,
+				84AAAEF7187EA54B00B563C5 /* PTNDatePickerViewController.m */,
+				84AAAEF8187EA54B00B563C5 /* PTNDatePickerViewController.xib */,
+				84AAAED6187EA47E00B563C5 /* PTNAppDelegate.h */,
+				84AAAED7187EA47E00B563C5 /* PTNAppDelegate.m */,
+				84AAAED9187EA47E00B563C5 /* Images.xcassets */,
+				84AAAECE187EA47E00B563C5 /* Supporting Files */,
+				84AAAEFB187EA57500B563C5 /* PTNSinglePickerViewController.h */,
+				84AAAEFC187EA57500B563C5 /* PTNSinglePickerViewController.m */,
+				84AAAEFD187EA57500B563C5 /* PTNSinglePickerViewController.xib */,
+				84AAAF00187EA6FD00B563C5 /* TabBarController.xib */,
+				84AAAF02187EC96500B563C5 /* PTNDoublePickerViewController.h */,
+				84AAAF03187EC96500B563C5 /* PTNDoublePickerViewController.m */,
+				84AAAF04187EC96500B563C5 /* PTNDoublePickerViewController.xib */,
+				84AAAF07187FE90D00B563C5 /* PTNGameViewController.h */,
+				84AAAF08187FE90D00B563C5 /* PTNGameViewController.m */,
+				84AAAF09187FE90D00B563C5 /* PTNGameViewController.xib */,
+			);
+			path = ch7;
+			sourceTree = "<group>";
+		};
+		84AAAECE187EA47E00B563C5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84AAAECF187EA47E00B563C5 /* ch7-Info.plist */,
+				84AAAED0187EA47E00B563C5 /* InfoPlist.strings */,
+				84AAAED3187EA47E00B563C5 /* main.m */,
+				84AAAED5187EA47E00B563C5 /* ch7-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84AAAEE6187EA47E00B563C5 /* ch7Tests */ = {
+			isa = PBXGroup;
+			children = (
+				84AAAEEC187EA47E00B563C5 /* ch7Tests.m */,
+				84AAAEE7187EA47E00B563C5 /* Supporting Files */,
+			);
+			path = ch7Tests;
+			sourceTree = "<group>";
+		};
+		84AAAEE7187EA47E00B563C5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84AAAEE8187EA47E00B563C5 /* ch7Tests-Info.plist */,
+				84AAAEE9187EA47E00B563C5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84AAAEC3187EA47E00B563C5 /* ch7 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84AAAEF0187EA47E00B563C5 /* Build configuration list for PBXNativeTarget "ch7" */;
+			buildPhases = (
+				84AAAEC0187EA47E00B563C5 /* Sources */,
+				84AAAEC1187EA47E00B563C5 /* Frameworks */,
+				84AAAEC2187EA47E00B563C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ch7;
+			productName = ch7;
+			productReference = 84AAAEC4187EA47E00B563C5 /* ch7.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84AAAEDE187EA47E00B563C5 /* ch7Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84AAAEF3187EA47E00B563C5 /* Build configuration list for PBXNativeTarget "ch7Tests" */;
+			buildPhases = (
+				84AAAEDB187EA47E00B563C5 /* Sources */,
+				84AAAEDC187EA47E00B563C5 /* Frameworks */,
+				84AAAEDD187EA47E00B563C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84AAAEE5187EA47E00B563C5 /* PBXTargetDependency */,
+			);
+			name = ch7Tests;
+			productName = ch7Tests;
+			productReference = 84AAAEDF187EA47E00B563C5 /* ch7Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84AAAEBC187EA47E00B563C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PTN;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Admin;
+				TargetAttributes = {
+					84AAAEDE187EA47E00B563C5 = {
+						TestTargetID = 84AAAEC3187EA47E00B563C5;
+					};
+				};
+			};
+			buildConfigurationList = 84AAAEBF187EA47E00B563C5 /* Build configuration list for PBXProject "ch7" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 84AAAEBB187EA47E00B563C5;
+			productRefGroup = 84AAAEC5187EA47E00B563C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84AAAEC3187EA47E00B563C5 /* ch7 */,
+				84AAAEDE187EA47E00B563C5 /* ch7Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84AAAEC2187EA47E00B563C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84AAAF12187FECD300B563C5 /* car.png in Resources */,
+				84AAAED2187EA47E00B563C5 /* InfoPlist.strings in Resources */,
+				84AAAF0B187FE90D00B563C5 /* PTNGameViewController.xib in Resources */,
+				84AAAF13187FECD300B563C5 /* caravan.png in Resources */,
+				84AAAEFF187EA57500B563C5 /* PTNSinglePickerViewController.xib in Resources */,
+				84AAAF06187EC96500B563C5 /* PTNDoublePickerViewController.xib in Resources */,
+				84AAAF15187FECD300B563C5 /* caution.png in Resources */,
+				84AAAF14187FECD300B563C5 /* card-in.png in Resources */,
+				84AAAF01187EA6FD00B563C5 /* TabBarController.xib in Resources */,
+				84AAAEFA187EA54C00B563C5 /* PTNDatePickerViewController.xib in Resources */,
+				84AAAEDA187EA47E00B563C5 /* Images.xcassets in Resources */,
+				84AAAF17187FECD300B563C5 /* cemetery.png in Resources */,
+				84AAAF16187FECD300B563C5 /* cctv.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84AAAEDD187EA47E00B563C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84AAAEEB187EA47E00B563C5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84AAAEC0187EA47E00B563C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84AAAED4187EA47E00B563C5 /* main.m in Sources */,
+				84AAAEF9187EA54C00B563C5 /* PTNDatePickerViewController.m in Sources */,
+				84AAAED8187EA47E00B563C5 /* PTNAppDelegate.m in Sources */,
+				84AAAF0A187FE90D00B563C5 /* PTNGameViewController.m in Sources */,
+				84AAAEFE187EA57500B563C5 /* PTNSinglePickerViewController.m in Sources */,
+				84AAAF05187EC96500B563C5 /* PTNDoublePickerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84AAAEDB187EA47E00B563C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84AAAEED187EA47E00B563C5 /* ch7Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84AAAEE5187EA47E00B563C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84AAAEC3187EA47E00B563C5 /* ch7 */;
+			targetProxy = 84AAAEE4187EA47E00B563C5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84AAAED0187EA47E00B563C5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84AAAED1187EA47E00B563C5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		84AAAEE9187EA47E00B563C5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84AAAEEA187EA47E00B563C5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84AAAEEE187EA47E00B563C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		84AAAEEF187EA47E00B563C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84AAAEF1187EA47E00B563C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ch7/ch7-Prefix.pch";
+				INFOPLIST_FILE = "ch7/ch7-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		84AAAEF2187EA47E00B563C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ch7/ch7-Prefix.pch";
+				INFOPLIST_FILE = "ch7/ch7-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		84AAAEF4187EA47E00B563C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ch7.app/ch7";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ch7/ch7-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ch7Tests/ch7Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		84AAAEF5187EA47E00B563C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ch7.app/ch7";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ch7/ch7-Prefix.pch";
+				INFOPLIST_FILE = "ch7Tests/ch7Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84AAAEBF187EA47E00B563C5 /* Build configuration list for PBXProject "ch7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84AAAEEE187EA47E00B563C5 /* Debug */,
+				84AAAEEF187EA47E00B563C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84AAAEF0187EA47E00B563C5 /* Build configuration list for PBXNativeTarget "ch7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84AAAEF1187EA47E00B563C5 /* Debug */,
+				84AAAEF2187EA47E00B563C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		84AAAEF3187EA47E00B563C5 /* Build configuration list for PBXNativeTarget "ch7Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84AAAEF4187EA47E00B563C5 /* Debug */,
+				84AAAEF5187EA47E00B563C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84AAAEBC187EA47E00B563C5 /* Project object */;
+}

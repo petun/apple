@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PTNSwitchViewController">
+            <connections>
+                <outlet property="btn1" destination="9Sn-Fr-Eoj" id="UdC-0V-mcv"/>
+                <outlet property="view" destination="1" id="oFr-q2-DDd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sn-Fr-Eoj">
+                    <rect key="frame" x="71" y="161" width="178" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Root View Controller Here">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonClicked:" destination="-1" eventType="touchUpInside" id="2o3-TO-AGa"/>
+                    </connections>
+                </button>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H16-qT-PTE">
+                    <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem title="Switch out views" id="w19-G5-pKe">
+                            <connections>
+                                <action selector="switchView:" destination="-1" id="7xS-fR-xi5"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="H16-qT-PTE" secondAttribute="bottom" id="INU-xR-pCw"/>
+                <constraint firstItem="H16-qT-PTE" firstAttribute="centerX" secondItem="9Sn-Fr-Eoj" secondAttribute="centerX" id="cva-SN-7J1"/>
+                <constraint firstAttribute="trailing" secondItem="H16-qT-PTE" secondAttribute="trailing" id="iYf-81-WrC"/>
+                <constraint firstItem="H16-qT-PTE" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="tM6-tZ-put"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>
