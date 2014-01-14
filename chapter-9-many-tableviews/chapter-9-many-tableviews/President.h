@@ -1,14 +1,14 @@
 //
-//  PTNPresident.h
+//  President.h
 //  chapter-9-many-tableviews
 //
-//  Created by Admin on 14.01.14.
+//  Created by petun on 14.01.14.
 //  Copyright (c) 2014 Admin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface PTNPresident : NSObject <NSCoding,NSCopying>
+@interface President : NSObject <NSCopying,NSCoding>
 
 @property (assign,nonatomic) NSInteger number;
 @property (copy,nonatomic) NSString *name;

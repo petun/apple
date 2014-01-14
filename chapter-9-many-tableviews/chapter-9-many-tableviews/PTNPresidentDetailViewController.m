@@ -7,7 +7,7 @@
 //
 
 #import "PTNPresidentDetailViewController.h"
-#import "PTNPresident.h"
+#import "President.h"
 
 #define kNumberOfEditableRows         4
 #define kNameRowIndex                 0
@@ -20,8 +20,12 @@
 #define kLabelTag                     2048
 #define kTextFieldTag                 4094
 
+    static NSString *CellIdentifier = @"Cell";
+
 @implementation PTNPresidentDetailViewController {
+    // заполняется при начале редактирования каждого текстового поля
     NSString *initialText;
+    // признак изменения данных
     BOOL hasChanges;
 }
 
@@ -33,6 +37,7 @@
 -(void)save:(id)sender {
     [self.view endEditing:YES];
     if (hasChanges) {
+        // сообщаем делегату об изменении данных, передаем новый объект и сам контроллер, у которого есть св-во row
         [self.delegate presidentDetailViewController:self didUpdatePresident:self.president];
     }
     [self.navigationController popViewControllerAnimated:YES];
@@ -42,17 +47,26 @@
     [sender resignFirstResponder];
 }
 
+// set Title for controller
+-(void)setPresident:(President *)president {
+    _president = president;
+    self.title = president.name;
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         self.fieldLabels = @[@"Name:", @"From:", @"To:", @"Party:"];
+       
         
+        // инициализация левой и правой кнопки для нав бара
         self.navigationItem.leftBarButtonItem =
         [[UIBarButtonItem alloc]
          initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
          target:self
          action:@selector(cancel:)];
+        
         self.navigationItem.rightBarButtonItem =
         [[UIBarButtonItem alloc]
          initWithBarButtonSystemItem:UIBarButtonSystemItemSave
@@ -74,12 +88,17 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     self.tableView.allowsSelection = NO;
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+    
 }
 
 #pragma mark - Table view data source
@@ -96,8 +115,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    // тут мы специально не регим предварительно ячейку, тк нам нужно к каждой ячейке добавить лейблы - один для правки второй для отображения названия поля, тут это возвращает всегда nil^ тк ячеек мало
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     
     // создаем ячейку, если нужно
@@ -153,7 +172,8 @@
     return cell;
 }
 
-
+// заполняем инит текст
+#pragma mark UILabel Delegate
 -(void)textFieldDidBeginEditing:(UITextField *)textField {
     initialText = textField.text;
 }

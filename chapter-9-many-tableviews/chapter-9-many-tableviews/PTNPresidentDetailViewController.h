@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class PTNPresident;
+@class President;
 @protocol PTNPresidentDetailViewControllerDelegate;
 
 
@@ -16,7 +16,7 @@
 @interface PTNPresidentDetailViewController : UITableViewController <UITextFieldDelegate>
 
 
-@property (copy,nonatomic) PTNPresident *president;
+@property (copy,nonatomic) President *president;
 @property (weak,nonatomic) id<PTNPresidentDetailViewControllerDelegate> delegate;
 @property (assign, nonatomic) NSInteger row;
 
@@ -35,7 +35,7 @@
 
 @protocol PTNPresidentDetailViewControllerDelegate <NSObject>
 
--(void) presidentDetailViewController:(PTNPresidentDetailViewController *)controller didUpdatePresident:(PTNPresident *)president;
+-(void) presidentDetailViewController:(PTNPresidentDetailViewController *)controller didUpdatePresident:(President *)president;
 
 @end
 
