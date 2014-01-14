@@ -21,6 +21,8 @@
 		196390D51885C134009BF206 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196390B71885C134009BF206 /* UIKit.framework */; };
 		196390DD1885C134009BF206 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 196390DB1885C134009BF206 /* InfoPlist.strings */; };
 		196390DF1885C134009BF206 /* ch10_Simple_Storyboar_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 196390DE1885C134009BF206 /* ch10_Simple_Storyboar_AppTests.m */; };
+		196390EA1885C75D009BF206 /* PTNTaskListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 196390E91885C75D009BF206 /* PTNTaskListViewController.m */; };
+		196390ED1885D087009BF206 /* PTNStaticCellsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 196390EC1885D087009BF206 /* PTNStaticCellsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		196390DA1885C134009BF206 /* ch10-Simple Storyboar AppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ch10-Simple Storyboar AppTests-Info.plist"; sourceTree = "<group>"; };
 		196390DC1885C134009BF206 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		196390DE1885C134009BF206 /* ch10_Simple_Storyboar_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ch10_Simple_Storyboar_AppTests.m; sourceTree = "<group>"; };
+		196390E81885C75D009BF206 /* PTNTaskListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTNTaskListViewController.h; sourceTree = "<group>"; };
+		196390E91885C75D009BF206 /* PTNTaskListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNTaskListViewController.m; sourceTree = "<group>"; };
+		196390EB1885D087009BF206 /* PTNStaticCellsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTNStaticCellsViewController.h; sourceTree = "<group>"; };
+		196390EC1885D087009BF206 /* PTNStaticCellsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNStaticCellsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,10 @@
 				196390C91885C134009BF206 /* PTNViewController.m */,
 				196390CB1885C134009BF206 /* Images.xcassets */,
 				196390BA1885C134009BF206 /* Supporting Files */,
+				196390E81885C75D009BF206 /* PTNTaskListViewController.h */,
+				196390E91885C75D009BF206 /* PTNTaskListViewController.m */,
+				196390EB1885D087009BF206 /* PTNStaticCellsViewController.h */,
+				196390EC1885D087009BF206 /* PTNStaticCellsViewController.m */,
 			);
 			path = "ch10-Simple Storyboar App";
 			sourceTree = "<group>";
@@ -252,7 +262,9 @@
 			files = (
 				196390CA1885C134009BF206 /* PTNViewController.m in Sources */,
 				196390C01885C134009BF206 /* main.m in Sources */,
+				196390EA1885C75D009BF206 /* PTNTaskListViewController.m in Sources */,
 				196390C41885C134009BF206 /* PTNAppDelegate.m in Sources */,
+				196390ED1885D087009BF206 /* PTNStaticCellsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +394,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ch10-Simple Storyboar App/ch10-Simple Storyboar App-Prefix.pch";
 				INFOPLIST_FILE = "ch10-Simple Storyboar App/ch10-Simple Storyboar App-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -395,7 +409,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ch10-Simple Storyboar App/ch10-Simple Storyboar App-Prefix.pch";
 				INFOPLIST_FILE = "ch10-Simple Storyboar App/ch10-Simple Storyboar App-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -1,5 +1,5 @@
 //
-//  PTNViewController.h
+//  PTNTaskListViewController.h
 //  ch10-Simple Storyboar App
 //
 //  Created by petun on 14.01.14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PTNViewController : UIViewController
+@interface PTNTaskListViewController : UITableViewController
 
 @property (strong,nonatomic) NSArray *tasks;
 
