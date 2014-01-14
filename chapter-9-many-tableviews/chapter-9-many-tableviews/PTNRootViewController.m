@@ -13,6 +13,7 @@
 #import "PTNControlsViewController.h"
 #import "PTNMoveMeViewController.h"
 #import "PTNDeleteMeViewController.h"
+#import "PTNPresidentViewViewController.h"
 
 static NSString *CellIdentifier = @"Cell";
 
@@ -54,7 +55,8 @@ static NSString *CellIdentifier = @"Cell";
     self.controllers = @[discl,checkController,
                          [[PTNControlsViewController alloc] init],
                          [[PTNMoveMeViewController alloc] init],
-                         [[PTNDeleteMeViewController alloc] init]
+                         [[PTNDeleteMeViewController alloc] init],
+                         [[PTNPresidentViewViewController alloc] init]
                          ];
 }
 

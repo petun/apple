@@ -27,6 +27,11 @@
 		8404A9041884113900D63DAC /* PTNDiscloseButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8404A9031884113900D63DAC /* PTNDiscloseButtonViewController.m */; };
 		8404A907188412E100D63DAC /* PTNDiscloseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8404A906188412E100D63DAC /* PTNDiscloseDetailViewController.m */; };
 		8404A90A188416F800D63DAC /* PTNCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8404A909188416F800D63DAC /* PTNCheckViewController.m */; };
+		8404A90D188503AE00D63DAC /* PTNPresident.m in Sources */ = {isa = PBXBuildFile; fileRef = 8404A90C188503AE00D63DAC /* PTNPresident.m */; };
+		8404A910188506E300D63DAC /* PTNPresidentViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8404A90F188506E300D63DAC /* PTNPresidentViewViewController.m */; };
+		8404A9131885075000D63DAC /* PTNPresidentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8404A9121885075000D63DAC /* PTNPresidentDetailViewController.m */; };
+		8404A915188563BE00D63DAC /* Presidents.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8404A914188563BE00D63DAC /* Presidents.plist */; };
+		8404A91718856A3900D63DAC /* Presidents2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8404A91618856A3900D63DAC /* Presidents2.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +77,14 @@
 		8404A906188412E100D63DAC /* PTNDiscloseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNDiscloseDetailViewController.m; sourceTree = "<group>"; };
 		8404A908188416F800D63DAC /* PTNCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTNCheckViewController.h; sourceTree = "<group>"; };
 		8404A909188416F800D63DAC /* PTNCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNCheckViewController.m; sourceTree = "<group>"; };
+		8404A90B188503AE00D63DAC /* PTNPresident.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTNPresident.h; sourceTree = "<group>"; };
+		8404A90C188503AE00D63DAC /* PTNPresident.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNPresident.m; sourceTree = "<group>"; };
+		8404A90E188506E300D63DAC /* PTNPresidentViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTNPresidentViewViewController.h; sourceTree = "<group>"; };
+		8404A90F188506E300D63DAC /* PTNPresidentViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNPresidentViewViewController.m; sourceTree = "<group>"; };
+		8404A9111885075000D63DAC /* PTNPresidentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTNPresidentDetailViewController.h; sourceTree = "<group>"; };
+		8404A9121885075000D63DAC /* PTNPresidentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNPresidentDetailViewController.m; sourceTree = "<group>"; };
+		8404A914188563BE00D63DAC /* Presidents.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Presidents.plist; sourceTree = "<group>"; };
+		8404A91618856A3900D63DAC /* Presidents2.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Presidents2.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +144,8 @@
 		8404A8D018840D6500D63DAC /* chapter-9-many-tableviews */ = {
 			isa = PBXGroup;
 			children = (
+				8404A91618856A3900D63DAC /* Presidents2.plist */,
+				8404A914188563BE00D63DAC /* Presidents.plist */,
 				8404A8D918840D6500D63DAC /* PTNAppDelegate.h */,
 				8404A8DA18840D6500D63DAC /* PTNAppDelegate.m */,
 				8404A8DC18840D6500D63DAC /* Images.xcassets */,
@@ -151,6 +166,12 @@
 				1963909F188477B9009BF206 /* PTNMoveMeViewController.m */,
 				196390A118848392009BF206 /* PTNDeleteMeViewController.h */,
 				196390A218848392009BF206 /* PTNDeleteMeViewController.m */,
+				8404A90B188503AE00D63DAC /* PTNPresident.h */,
+				8404A90C188503AE00D63DAC /* PTNPresident.m */,
+				8404A90E188506E300D63DAC /* PTNPresidentViewViewController.h */,
+				8404A90F188506E300D63DAC /* PTNPresidentViewViewController.m */,
+				8404A9111885075000D63DAC /* PTNPresidentDetailViewController.h */,
+				8404A9121885075000D63DAC /* PTNPresidentDetailViewController.m */,
 			);
 			path = "chapter-9-many-tableviews";
 			sourceTree = "<group>";
@@ -260,7 +281,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8404A915188563BE00D63DAC /* Presidents.plist in Resources */,
 				8404A8D518840D6500D63DAC /* InfoPlist.strings in Resources */,
+				8404A91718856A3900D63DAC /* Presidents2.plist in Resources */,
 				8404A8DD18840D6500D63DAC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +313,9 @@
 				8404A907188412E100D63DAC /* PTNDiscloseDetailViewController.m in Sources */,
 				8404A90A188416F800D63DAC /* PTNCheckViewController.m in Sources */,
 				8404A8DB18840D6500D63DAC /* PTNAppDelegate.m in Sources */,
+				8404A910188506E300D63DAC /* PTNPresidentViewViewController.m in Sources */,
+				8404A90D188503AE00D63DAC /* PTNPresident.m in Sources */,
+				8404A9131885075000D63DAC /* PTNPresidentDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
