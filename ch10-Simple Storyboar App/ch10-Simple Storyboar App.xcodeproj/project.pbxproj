@@ -477,6 +477,7 @@
 				196390E41885C134009BF206 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		196390E51885C134009BF206 /* Build configuration list for PBXNativeTarget "ch10-Simple Storyboar AppTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +486,7 @@
 				196390E71885C134009BF206 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
