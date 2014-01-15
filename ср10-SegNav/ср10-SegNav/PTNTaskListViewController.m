@@ -23,11 +23,22 @@
     return self;
 }
 
+-(void)setBla:(NSDictionary *)bla {
+    // setter
+    _bla = bla;
+    
+    // additional set new value to table cell
+    NSIndexPath *path = bla[@"indexPath"];
+    
+    [self.tasks replaceObjectAtIndex:path.row withObject:bla[@"object"] ];
+    [self.tableView reloadRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.tasks = @[@"Walk the dog",
+    self.tasks = [[NSMutableArray alloc] initWithArray:@[@"Walk the dog",
                    @"URGENT: Buy milk",
                    @"Clean hidden lair",
                    @"Invent miniature dolphins",
@@ -35,7 +46,7 @@
                    @"Get revenge on do-gooder heroes",
                    @"URGENT: Fold laundry",
                    @"Hold entire world hostage",
-                   @"Manicure"];
+                   @"Manicure"]];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -126,6 +137,7 @@
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    // без делегатов, технология key-value coding (KVC)
     UIViewController *destination = [segue destinationViewController];
     if ([destination respondsToSelector:@selector(setDelegate:)]) {
         [destination setValue:self forKey:@"delegate"];

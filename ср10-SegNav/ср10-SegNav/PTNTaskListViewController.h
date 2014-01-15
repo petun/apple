@@ -10,6 +10,7 @@
 
 @interface PTNTaskListViewController : UITableViewController
 
-@property (strong,nonatomic) NSArray *tasks;
+@property (strong,nonatomic) NSMutableArray *tasks;
+@property (copy,nonatomic) NSDictionary *bla;
 
 @end
