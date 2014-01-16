@@ -40,6 +40,15 @@
     NSDictionary *presidentsDict = [NSDictionary dictionaryWithContentsOfFile:path];
     self.presidents = [presidentsDict objectForKey:@"presidents"];
     
+    // Read settings for app
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *username = [defaults objectForKey:@"username"];
+    NSLog(@"usernamr is %@",username);
+    NSLog(@"password is %@",[defaults objectForKey:@"password"]);
+    
+    // END Read settings for app
+    
 }
 
 - (void)didReceiveMemoryWarning
