@@ -24,6 +24,7 @@
 		1919BACE18870579004AA20F /* __11_PresidentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1919BACD18870579004AA20F /* __11_PresidentsTests.m */; };
 		841345FD1887E19C007B5ABF /* PresidentList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 841345FC1887E19C007B5ABF /* PresidentList.plist */; };
 		841346001887EA86007B5ABF /* PTNLanguageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841345FF1887EA86007B5ABF /* PTNLanguageListViewController.m */; };
+		841346021887FB32007B5ABF /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 841346011887FB32007B5ABF /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		841345FC1887E19C007B5ABF /* PresidentList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PresidentList.plist; sourceTree = "<group>"; };
 		841345FE1887EA86007B5ABF /* PTNLanguageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTNLanguageListViewController.h; sourceTree = "<group>"; };
 		841345FF1887EA86007B5ABF /* PTNLanguageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNLanguageListViewController.m; sourceTree = "<group>"; };
+		841346011887FB32007B5ABF /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				1919BAA618870579004AA20F /* Supporting Files */,
 				841345FE1887EA86007B5ABF /* PTNLanguageListViewController.h */,
 				841345FF1887EA86007B5ABF /* PTNLanguageListViewController.m */,
+				841346011887FB32007B5ABF /* Settings.bundle */,
 			);
 			path = "ср11-Presidents";
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			files = (
 				1919BABB18870579004AA20F /* Images.xcassets in Resources */,
 				1919BAAA18870579004AA20F /* InfoPlist.strings in Resources */,
+				841346021887FB32007B5ABF /* Settings.bundle in Resources */,
 				1919BAB318870579004AA20F /* Main.storyboard in Resources */,
 				841345FD1887E19C007B5ABF /* PresidentList.plist in Resources */,
 			);
