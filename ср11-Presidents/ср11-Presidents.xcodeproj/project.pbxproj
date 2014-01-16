@@ -22,6 +22,8 @@
 		1919BAC418870579004AA20F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1919BAA318870579004AA20F /* UIKit.framework */; };
 		1919BACC18870579004AA20F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1919BACA18870579004AA20F /* InfoPlist.strings */; };
 		1919BACE18870579004AA20F /* __11_PresidentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1919BACD18870579004AA20F /* __11_PresidentsTests.m */; };
+		841345FD1887E19C007B5ABF /* PresidentList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 841345FC1887E19C007B5ABF /* PresidentList.plist */; };
+		841346001887EA86007B5ABF /* PTNLanguageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841345FF1887EA86007B5ABF /* PTNLanguageListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,9 @@
 		1919BAC918870579004AA20F /* ср11-PresidentsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ср11-PresidentsTests-Info.plist"; sourceTree = "<group>"; };
 		1919BACB18870579004AA20F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1919BACD18870579004AA20F /* __11_PresidentsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __11_PresidentsTests.m; sourceTree = "<group>"; };
+		841345FC1887E19C007B5ABF /* PresidentList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PresidentList.plist; sourceTree = "<group>"; };
+		841345FE1887EA86007B5ABF /* PTNLanguageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTNLanguageListViewController.h; sourceTree = "<group>"; };
+		841345FF1887EA86007B5ABF /* PTNLanguageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNLanguageListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +120,7 @@
 		1919BAA518870579004AA20F /* ср11-Presidents */ = {
 			isa = PBXGroup;
 			children = (
+				841345FC1887E19C007B5ABF /* PresidentList.plist */,
 				1919BAAE18870579004AA20F /* PTNAppDelegate.h */,
 				1919BAAF18870579004AA20F /* PTNAppDelegate.m */,
 				1919BAB118870579004AA20F /* Main.storyboard */,
@@ -124,6 +130,8 @@
 				1919BAB818870579004AA20F /* PTNDetailViewController.m */,
 				1919BABA18870579004AA20F /* Images.xcassets */,
 				1919BAA618870579004AA20F /* Supporting Files */,
+				841345FE1887EA86007B5ABF /* PTNLanguageListViewController.h */,
+				841345FF1887EA86007B5ABF /* PTNLanguageListViewController.m */,
 			);
 			path = "ср11-Presidents";
 			sourceTree = "<group>";
@@ -237,6 +245,7 @@
 				1919BABB18870579004AA20F /* Images.xcassets in Resources */,
 				1919BAAA18870579004AA20F /* InfoPlist.strings in Resources */,
 				1919BAB318870579004AA20F /* Main.storyboard in Resources */,
+				841345FD1887E19C007B5ABF /* PresidentList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841346001887EA86007B5ABF /* PTNLanguageListViewController.m in Sources */,
 				1919BAB918870579004AA20F /* PTNDetailViewController.m in Sources */,
 				1919BAAC18870579004AA20F /* main.m in Sources */,
 				1919BAB018870579004AA20F /* PTNAppDelegate.m in Sources */,
@@ -469,6 +479,7 @@
 				1919BAD318870579004AA20F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1919BAD418870579004AA20F /* Build configuration list for PBXNativeTarget "ср11-PresidentsTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +488,7 @@
 				1919BAD618870579004AA20F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

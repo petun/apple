@@ -13,5 +13,6 @@
 @interface PTNMasterViewController : UITableViewController
 
 @property (strong, nonatomic) PTNDetailViewController *detailViewController;
+@property (copy,nonatomic) NSArray *presidents;
 
 @end
