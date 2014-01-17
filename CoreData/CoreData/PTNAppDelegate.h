@@ -1,9 +1,9 @@
 //
 //  PTNAppDelegate.h
-//  ch13-CoreData
+//  CoreData
 //
-//  Created by Admin on 17.01.14.
-//  Copyright (c) 2014 Admin. All rights reserved.
+//  Created by petun on 18.01.14.
+//  Copyright (c) 2014 petun. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

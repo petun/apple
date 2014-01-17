@@ -1,18 +1,18 @@
 //
-//  ch13_CoreDataTests.m
-//  ch13-CoreDataTests
+//  CoreDataTests.m
+//  CoreDataTests
 //
-//  Created by Admin on 17.01.14.
-//  Copyright (c) 2014 Admin. All rights reserved.
+//  Created by petun on 18.01.14.
+//  Copyright (c) 2014 petun. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface ch13_CoreDataTests : XCTestCase
+@interface CoreDataTests : XCTestCase
 
 @end
 
-@implementation ch13_CoreDataTests
+@implementation CoreDataTests
 
 - (void)setUp
 {

@@ -1,12 +1,13 @@
 //
 //  PTNAppDelegate.m
-//  ch13-CoreData
+//  CoreData
 //
-//  Created by Admin on 17.01.14.
-//  Copyright (c) 2014 Admin. All rights reserved.
+//  Created by petun on 18.01.14.
+//  Copyright (c) 2014 petun. All rights reserved.
 //
 
 #import "PTNAppDelegate.h"
+#import "PTNViewController.h"
 
 @implementation PTNAppDelegate
 
@@ -18,6 +19,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    PTNViewController *controller = [[PTNViewController alloc] init];
+    self.window.rootViewController = controller;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
@@ -90,7 +95,7 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"ch13_CoreData" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"CoreData" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -103,7 +108,7 @@
         return _persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"ch13_CoreData.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"CoreData.sqlite"];
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
