@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		191EDD80188C501800FE67B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191EDD7F188C501800FE67B2 /* Foundation.framework */; };
+		191EDD82188C501800FE67B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191EDD81188C501800FE67B2 /* CoreGraphics.framework */; };
+		191EDD84188C501800FE67B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191EDD83188C501800FE67B2 /* UIKit.framework */; };
+		191EDD8A188C501800FE67B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 191EDD88188C501800FE67B2 /* InfoPlist.strings */; };
+		191EDD8C188C501800FE67B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 191EDD8B188C501800FE67B2 /* main.m */; };
+		191EDD90188C501800FE67B2 /* PTNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 191EDD8F188C501800FE67B2 /* PTNAppDelegate.m */; };
+		191EDD92188C501800FE67B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 191EDD91188C501800FE67B2 /* Images.xcassets */; };
+		191EDD99188C501800FE67B2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191EDD98188C501800FE67B2 /* XCTest.framework */; };
+		191EDD9A188C501800FE67B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191EDD7F188C501800FE67B2 /* Foundation.framework */; };
+		191EDD9B188C501800FE67B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191EDD83188C501800FE67B2 /* UIKit.framework */; };
+		191EDDA3188C501800FE67B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 191EDDA1188C501800FE67B2 /* InfoPlist.strings */; };
+		191EDDA5188C501800FE67B2 /* ch15_GCDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 191EDDA4188C501800FE67B2 /* ch15_GCDTests.m */; };
+		191EDDB1188C502500FE67B2 /* PTNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 191EDDAF188C502500FE67B2 /* PTNViewController.m */; };
+		191EDDB2188C502500FE67B2 /* PTNViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191EDDB0188C502500FE67B2 /* PTNViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		191EDD9C188C501800FE67B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 191EDD74188C501800FE67B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 191EDD7B188C501800FE67B2;
+			remoteInfo = "ch15-GCD";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		191EDD7C188C501800FE67B2 /* ch15-GCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ch15-GCD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		191EDD7F188C501800FE67B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		191EDD81188C501800FE67B2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		191EDD83188C501800FE67B2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		191EDD87188C501800FE67B2 /* ch15-GCD-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ch15-GCD-Info.plist"; sourceTree = "<group>"; };
+		191EDD89188C501800FE67B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		191EDD8B188C501800FE67B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		191EDD8D188C501800FE67B2 /* ch15-GCD-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ch15-GCD-Prefix.pch"; sourceTree = "<group>"; };
+		191EDD8E188C501800FE67B2 /* PTNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTNAppDelegate.h; sourceTree = "<group>"; };
+		191EDD8F188C501800FE67B2 /* PTNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTNAppDelegate.m; sourceTree = "<group>"; };
+		191EDD91188C501800FE67B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		191EDD97188C501800FE67B2 /* ch15-GCDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ch15-GCDTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		191EDD98188C501800FE67B2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		191EDDA0188C501800FE67B2 /* ch15-GCDTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ch15-GCDTests-Info.plist"; sourceTree = "<group>"; };
+		191EDDA2188C501800FE67B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		191EDDA4188C501800FE67B2 /* ch15_GCDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ch15_GCDTests.m; sourceTree = "<group>"; };
+		191EDDAE188C502500FE67B2 /* PTNViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTNViewController.h; sourceTree = "<group>"; };
+		191EDDAF188C502500FE67B2 /* PTNViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNViewController.m; sourceTree = "<group>"; };
+		191EDDB0188C502500FE67B2 /* PTNViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTNViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		191EDD79188C501800FE67B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				191EDD82188C501800FE67B2 /* CoreGraphics.framework in Frameworks */,
+				191EDD84188C501800FE67B2 /* UIKit.framework in Frameworks */,
+				191EDD80188C501800FE67B2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		191EDD94188C501800FE67B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				191EDD99188C501800FE67B2 /* XCTest.framework in Frameworks */,
+				191EDD9B188C501800FE67B2 /* UIKit.framework in Frameworks */,
+				191EDD9A188C501800FE67B2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		191EDD73188C501800FE67B2 = {
+			isa = PBXGroup;
+			children = (
+				191EDD85188C501800FE67B2 /* ch15-GCD */,
+				191EDD9E188C501800FE67B2 /* ch15-GCDTests */,
+				191EDD7E188C501800FE67B2 /* Frameworks */,
+				191EDD7D188C501800FE67B2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		191EDD7D188C501800FE67B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				191EDD7C188C501800FE67B2 /* ch15-GCD.app */,
+				191EDD97188C501800FE67B2 /* ch15-GCDTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		191EDD7E188C501800FE67B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				191EDD7F188C501800FE67B2 /* Foundation.framework */,
+				191EDD81188C501800FE67B2 /* CoreGraphics.framework */,
+				191EDD83188C501800FE67B2 /* UIKit.framework */,
+				191EDD98188C501800FE67B2 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		191EDD85188C501800FE67B2 /* ch15-GCD */ = {
+			isa = PBXGroup;
+			children = (
+				191EDD8E188C501800FE67B2 /* PTNAppDelegate.h */,
+				191EDD8F188C501800FE67B2 /* PTNAppDelegate.m */,
+				191EDD91188C501800FE67B2 /* Images.xcassets */,
+				191EDD86188C501800FE67B2 /* Supporting Files */,
+				191EDDAE188C502500FE67B2 /* PTNViewController.h */,
+				191EDDAF188C502500FE67B2 /* PTNViewController.m */,
+				191EDDB0188C502500FE67B2 /* PTNViewController.xib */,
+			);
+			path = "ch15-GCD";
+			sourceTree = "<group>";
+		};
+		191EDD86188C501800FE67B2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				191EDD87188C501800FE67B2 /* ch15-GCD-Info.plist */,
+				191EDD88188C501800FE67B2 /* InfoPlist.strings */,
+				191EDD8B188C501800FE67B2 /* main.m */,
+				191EDD8D188C501800FE67B2 /* ch15-GCD-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		191EDD9E188C501800FE67B2 /* ch15-GCDTests */ = {
+			isa = PBXGroup;
+			children = (
+				191EDDA4188C501800FE67B2 /* ch15_GCDTests.m */,
+				191EDD9F188C501800FE67B2 /* Supporting Files */,
+			);
+			path = "ch15-GCDTests";
+			sourceTree = "<group>";
+		};
+		191EDD9F188C501800FE67B2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				191EDDA0188C501800FE67B2 /* ch15-GCDTests-Info.plist */,
+				191EDDA1188C501800FE67B2 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		191EDD7B188C501800FE67B2 /* ch15-GCD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 191EDDA8188C501800FE67B2 /* Build configuration list for PBXNativeTarget "ch15-GCD" */;
+			buildPhases = (
+				191EDD78188C501800FE67B2 /* Sources */,
+				191EDD79188C501800FE67B2 /* Frameworks */,
+				191EDD7A188C501800FE67B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ch15-GCD";
+			productName = "ch15-GCD";
+			productReference = 191EDD7C188C501800FE67B2 /* ch15-GCD.app */;
+			productType = "com.apple.product-type.application";
+		};
+		191EDD96188C501800FE67B2 /* ch15-GCDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 191EDDAB188C501800FE67B2 /* Build configuration list for PBXNativeTarget "ch15-GCDTests" */;
+			buildPhases = (
+				191EDD93188C501800FE67B2 /* Sources */,
+				191EDD94188C501800FE67B2 /* Frameworks */,
+				191EDD95188C501800FE67B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				191EDD9D188C501800FE67B2 /* PBXTargetDependency */,
+			);
+			name = "ch15-GCDTests";
+			productName = "ch15-GCDTests";
+			productReference = 191EDD97188C501800FE67B2 /* ch15-GCDTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		191EDD74188C501800FE67B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PTN;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = petun;
+				TargetAttributes = {
+					191EDD96188C501800FE67B2 = {
+						TestTargetID = 191EDD7B188C501800FE67B2;
+					};
+				};
+			};
+			buildConfigurationList = 191EDD77188C501800FE67B2 /* Build configuration list for PBXProject "ch15-GCD" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 191EDD73188C501800FE67B2;
+			productRefGroup = 191EDD7D188C501800FE67B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				191EDD7B188C501800FE67B2 /* ch15-GCD */,
+				191EDD96188C501800FE67B2 /* ch15-GCDTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		191EDD7A188C501800FE67B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				191EDDB2188C502500FE67B2 /* PTNViewController.xib in Resources */,
+				191EDD8A188C501800FE67B2 /* InfoPlist.strings in Resources */,
+				191EDD92188C501800FE67B2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		191EDD95188C501800FE67B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				191EDDA3188C501800FE67B2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		191EDD78188C501800FE67B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				191EDDB1188C502500FE67B2 /* PTNViewController.m in Sources */,
+				191EDD8C188C501800FE67B2 /* main.m in Sources */,
+				191EDD90188C501800FE67B2 /* PTNAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		191EDD93188C501800FE67B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				191EDDA5188C501800FE67B2 /* ch15_GCDTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		191EDD9D188C501800FE67B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 191EDD7B188C501800FE67B2 /* ch15-GCD */;
+			targetProxy = 191EDD9C188C501800FE67B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		191EDD88188C501800FE67B2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				191EDD89188C501800FE67B2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		191EDDA1188C501800FE67B2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				191EDDA2188C501800FE67B2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		191EDDA6188C501800FE67B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		191EDDA7188C501800FE67B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		191EDDA9188C501800FE67B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ch15-GCD/ch15-GCD-Prefix.pch";
+				INFOPLIST_FILE = "ch15-GCD/ch15-GCD-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		191EDDAA188C501800FE67B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ch15-GCD/ch15-GCD-Prefix.pch";
+				INFOPLIST_FILE = "ch15-GCD/ch15-GCD-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		191EDDAC188C501800FE67B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ch15-GCD.app/ch15-GCD";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ch15-GCD/ch15-GCD-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ch15-GCDTests/ch15-GCDTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		191EDDAD188C501800FE67B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ch15-GCD.app/ch15-GCD";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ch15-GCD/ch15-GCD-Prefix.pch";
+				INFOPLIST_FILE = "ch15-GCDTests/ch15-GCDTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		191EDD77188C501800FE67B2 /* Build configuration list for PBXProject "ch15-GCD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				191EDDA6188C501800FE67B2 /* Debug */,
+				191EDDA7188C501800FE67B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		191EDDA8188C501800FE67B2 /* Build configuration list for PBXNativeTarget "ch15-GCD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				191EDDA9188C501800FE67B2 /* Debug */,
+				191EDDAA188C501800FE67B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		191EDDAB188C501800FE67B2 /* Build configuration list for PBXNativeTarget "ch15-GCDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				191EDDAC188C501800FE67B2 /* Debug */,
+				191EDDAD188C501800FE67B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 191EDD74188C501800FE67B2 /* Project object */;
+}
