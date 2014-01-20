@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>id</key>
+		<integer>1</integer>
+		<key>parent_id</key>
+		<integer>0</integer>
+		<key>name</key>
+		<string>Недвижимость</string>
+		<key>desc</key>
+		<string>Недвижимость</string>
+		<key>ad_count</key>
+		<integer>10</integer>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>2</integer>
+		<key>parent_id</key>
+		<integer>0</integer>
+		<key>name</key>
+		<string>Работа</string>
+		<key>desc</key>
+		<string>Работа</string>
+		<key>ad_count</key>
+		<integer>20</integer>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>3</integer>
+		<key>parent_id</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>Квартиры</string>
+		<key>desc</key>
+		<string>Квартиры</string>
+		<key>ad_count</key>
+		<integer>129</integer>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>4</integer>
+		<key>parent_id</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>Дома</string>
+		<key>desc</key>
+		<string>Дома</string>
+		<key>ad_count</key>
+		<integer>100</integer>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>5</integer>
+		<key>parent_id</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>Гаражи</string>
+		<key>desc</key>
+		<string>Гаражи</string>
+		<key>ad_count</key>
+		<integer>59</integer>
+	</dict>
+</array>
+</plist>
