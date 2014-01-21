@@ -8,6 +8,8 @@
 
 #import "PTNAdViewController.h"
 #import "PTNAdCell.h"
+#import "PTNAdDetailViewController.h"
+
 static NSString * const kCellAdId = @"kCellAdId";
 
 @interface PTNAdViewController ()
@@ -85,7 +87,16 @@ static NSString * const kCellAdId = @"kCellAdId";
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 82;
+    return 112;
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    PTNAdDetailViewController *detailController = [[PTNAdDetailViewController alloc] init];
+
+    detailController.ad = self.ads[indexPath.row];
+    
+    [self.navigationController pushViewController:detailController animated:YES];
 }
 
 @end

@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>thumb</key>
+		<string>http://vyksa.org/photos/thumb_39cb735ca7883dd6d0033b6bbda8b81d.jpg</string>
 		<key>town</key>
 		<string>Выкса</string>
 		<key>name</key>
@@ -19,6 +21,10 @@
 		<integer>1500500</integer>
 		<key>view_count</key>
 		<integer>0</integer>
+		<key>meta</key>
+		<string>meta here</string>
+		<key>publishedon</key>
+		<date>2014-01-21T18:25:58Z</date>
 	</dict>
 	<dict>
 		<key>town</key>
@@ -37,6 +43,12 @@
 		<integer>750000</integer>
 		<key>view_count</key>
 		<integer>0</integer>
+		<key>meta</key>
+		<string></string>
+		<key>publishedon</key>
+		<date>2014-01-21T18:26:01Z</date>
+		<key>thumb</key>
+		<string>http://vyksa.org/photos/thumb_b75597ce6efe36ff1e1e2824bfe72f5e.jpg</string>
 	</dict>
 </array>
 </plist>

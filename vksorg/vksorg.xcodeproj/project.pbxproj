@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1937C468188EF81B0055C11C /* PTNAdDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1937C466188EF81B0055C11C /* PTNAdDetailViewController.m */; };
+		1937C469188EF81B0055C11C /* PTNAdDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1937C467188EF81B0055C11C /* PTNAdDetailViewController.xib */; };
 		84F0313F188E8B360051D571 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F0313E188E8B360051D571 /* Foundation.framework */; };
 		84F03141188E8B360051D571 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F03140188E8B360051D571 /* CoreGraphics.framework */; };
 		84F03143188E8B360051D571 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F03142188E8B360051D571 /* UIKit.framework */; };
@@ -40,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1937C465188EF81B0055C11C /* PTNAdDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTNAdDetailViewController.h; sourceTree = "<group>"; };
+		1937C466188EF81B0055C11C /* PTNAdDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNAdDetailViewController.m; sourceTree = "<group>"; };
+		1937C467188EF81B0055C11C /* PTNAdDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTNAdDetailViewController.xib; sourceTree = "<group>"; };
 		84F0313B188E8B360051D571 /* vksorg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vksorg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F0313E188E8B360051D571 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84F03140188E8B360051D571 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -141,6 +146,9 @@
 				84F0317A188E98E80051D571 /* PTNAdCell.m */,
 				84F0317C188E99120051D571 /* PTNAdCell.xib */,
 				84F0317E188E9D120051D571 /* ads.plist */,
+				1937C465188EF81B0055C11C /* PTNAdDetailViewController.h */,
+				1937C466188EF81B0055C11C /* PTNAdDetailViewController.m */,
+				1937C467188EF81B0055C11C /* PTNAdDetailViewController.xib */,
 			);
 			path = vksorg;
 			sourceTree = "<group>";
@@ -257,6 +265,7 @@
 				84F0317F188E9D120051D571 /* ads.plist in Resources */,
 				84F03149188E8B360051D571 /* InfoPlist.strings in Resources */,
 				84F03151188E8B360051D571 /* Images.xcassets in Resources */,
+				1937C469188EF81B0055C11C /* PTNAdDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84F0317B188E98E80051D571 /* PTNAdCell.m in Sources */,
+				1937C468188EF81B0055C11C /* PTNAdDetailViewController.m in Sources */,
 				84F0314B188E8B360051D571 /* main.m in Sources */,
 				84F0314F188E8B360051D571 /* PTNAppDelegate.m in Sources */,
 				84F03177188E98C30051D571 /* PTNAdViewController.m in Sources */,
@@ -480,6 +490,7 @@
 				84F03169188E8B360051D571 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84F0316A188E8B360051D571 /* Build configuration list for PBXNativeTarget "vksorgTests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +499,7 @@
 				84F0316C188E8B360051D571 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
