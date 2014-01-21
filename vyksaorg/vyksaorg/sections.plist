@@ -13,6 +13,8 @@
 		<string>Недвижимость</string>
 		<key>ad_count</key>
 		<integer>10</integer>
+		<key>is_container</key>
+		<true/>
 	</dict>
 	<dict>
 		<key>id</key>
@@ -25,6 +27,8 @@
 		<string>Работа</string>
 		<key>ad_count</key>
 		<integer>20</integer>
+		<key>is_container</key>
+		<true/>
 	</dict>
 	<dict>
 		<key>id</key>
@@ -37,6 +41,8 @@
 		<string>Квартиры</string>
 		<key>ad_count</key>
 		<integer>129</integer>
+		<key>is_container</key>
+		<false/>
 	</dict>
 	<dict>
 		<key>id</key>
@@ -49,6 +55,8 @@
 		<string>Дома</string>
 		<key>ad_count</key>
 		<integer>100</integer>
+		<key>is_container</key>
+		<false/>
 	</dict>
 	<dict>
 		<key>id</key>
@@ -61,6 +69,8 @@
 		<string>Гаражи</string>
 		<key>ad_count</key>
 		<integer>59</integer>
+		<key>is_container</key>
+		<false/>
 	</dict>
 </array>
 </plist>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>town</key>
+		<string>Выкса</string>
+		<key>name</key>
+		<string>Петр</string>
+		<key>telephone</key>
+		<string>+79506286894</string>
+		<key>site</key>
+		<string></string>
+		<key>title</key>
+		<string>Продам самый длинный заголовок на свете</string>
+		<key>comment</key>
+		<string>Продам самый длинный заголовок на свете</string>
+		<key>price</key>
+		<integer>1500500</integer>
+		<key>view_count</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>town</key>
+		<string>Выкса</string>
+		<key>name</key>
+		<string>Екатерина</string>
+		<key>telephone</key>
+		<string>+79506286894</string>
+		<key>site</key>
+		<string></string>
+		<key>title</key>
+		<string>Продается дом 2 на 2 с половиной</string>
+		<key>comment</key>
+		<string>Продам самый длинный заголовок на свете</string>
+		<key>price</key>
+		<integer>750000</integer>
+		<key>view_count</key>
+		<integer>0</integer>
+	</dict>
+</array>
+</plist>
