@@ -12,4 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong,nonatomic) NSArray *allPersons;
+@property (strong,nonatomic) NSMutableDictionary *allDepartments;
+
 @end

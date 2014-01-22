@@ -7,12 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+@class PTNAppDelegate;
 
 @interface PTNPersonsViewController : UITableViewController <UISearchDisplayDelegate, UISearchBarDelegate>
 
-@property (copy,nonatomic) NSDictionary *persons;
+@property (strong,nonatomic) NSMutableDictionary *persons;
+
 @property (copy,nonatomic) NSArray *keys;
 
-@property (strong,nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong,nonatomic) PTNAppDelegate *appDelegate;
+
+
+
 
 @end

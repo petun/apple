@@ -7,6 +7,7 @@
 //
 
 #import "PTNDetailPersonViewController.h"
+#import "PTNDepartmentDetailViewController.h"
 
 @interface PTNDetailPersonViewController ()
 
@@ -40,7 +41,18 @@
     self.mobTelLabel.text = self.person[@"MTELL"];
 }
 
-#pragma mark - Table view data source
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSLog(@"prepare ForSegue");
+    
+    
+    PTNDepartmentDetailViewController *dest = segue.destinationViewController;
+    dest.departmentName = self.person[@"ORGEH_TXT"];
+    dest.departmentNumber = self.person[@"ORGEH"];
+    
+    
+}
 
 
 

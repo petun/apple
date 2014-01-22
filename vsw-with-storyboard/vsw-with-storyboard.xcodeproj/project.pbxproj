@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1937C46C189033DF0055C11C /* PTNDepartmentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1937C46B189033DF0055C11C /* PTNDepartmentDetailViewController.m */; };
 		84F03230188FADBD0051D571 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F0322F188FADBD0051D571 /* Foundation.framework */; };
 		84F03232188FADBD0051D571 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F03231188FADBD0051D571 /* CoreGraphics.framework */; };
 		84F03234188FADBD0051D571 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F03233188FADBD0051D571 /* UIKit.framework */; };
@@ -23,7 +24,6 @@
 		84F03262188FAE740051D571 /* PTNPersonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F03261188FAE740051D571 /* PTNPersonsViewController.m */; };
 		84F03265188FAE8F0051D571 /* PTNDetailPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F03264188FAE8F0051D571 /* PTNDetailPersonViewController.m */; };
 		84F03267188FAEF90051D571 /* ps.binary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84F03266188FAEF90051D571 /* ps.binary.plist */; };
-		84F0326A188FB0840051D571 /* PTNasadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F03269188FB0840051D571 /* PTNasadViewController.m */; };
 		84F0326C188FEBDE0051D571 /* ps_flat.binary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84F0326B188FEBDE0051D571 /* ps_flat.binary.plist */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1937C46A189033DF0055C11C /* PTNDepartmentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTNDepartmentDetailViewController.h; sourceTree = "<group>"; };
+		1937C46B189033DF0055C11C /* PTNDepartmentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNDepartmentDetailViewController.m; sourceTree = "<group>"; };
 		84F0322C188FADBD0051D571 /* vsw-with-storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vsw-with-storyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F0322F188FADBD0051D571 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84F03231188FADBD0051D571 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,8 +62,6 @@
 		84F03263188FAE8F0051D571 /* PTNDetailPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTNDetailPersonViewController.h; sourceTree = "<group>"; };
 		84F03264188FAE8F0051D571 /* PTNDetailPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNDetailPersonViewController.m; sourceTree = "<group>"; };
 		84F03266188FAEF90051D571 /* ps.binary.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ps.binary.plist; sourceTree = "<group>"; };
-		84F03268188FB0840051D571 /* PTNasadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTNasadViewController.h; sourceTree = "<group>"; };
-		84F03269188FB0840051D571 /* PTNasadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNasadViewController.m; sourceTree = "<group>"; };
 		84F0326B188FEBDE0051D571 /* ps_flat.binary.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ps_flat.binary.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,8 +133,8 @@
 				84F03241188FADBD0051D571 /* Images.xcassets */,
 				84F03236188FADBD0051D571 /* Supporting Files */,
 				84F0325E188FADD00051D571 /* MainStoryboard.storyboard */,
-				84F03268188FB0840051D571 /* PTNasadViewController.h */,
-				84F03269188FB0840051D571 /* PTNasadViewController.m */,
+				1937C46A189033DF0055C11C /* PTNDepartmentDetailViewController.h */,
+				1937C46B189033DF0055C11C /* PTNDepartmentDetailViewController.m */,
 			);
 			path = "vsw-with-storyboard";
 			sourceTree = "<group>";
@@ -268,8 +268,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84F0323C188FADBD0051D571 /* main.m in Sources */,
-				84F0326A188FB0840051D571 /* PTNasadViewController.m in Sources */,
 				84F03265188FAE8F0051D571 /* PTNDetailPersonViewController.m in Sources */,
+				1937C46C189033DF0055C11C /* PTNDepartmentDetailViewController.m in Sources */,
 				84F03240188FADBD0051D571 /* PTNAppDelegate.m in Sources */,
 				84F03262188FAE740051D571 /* PTNPersonsViewController.m in Sources */,
 			);
@@ -472,6 +472,7 @@
 				84F0325A188FADBE0051D571 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84F0325B188FADBE0051D571 /* Build configuration list for PBXNativeTarget "vsw-with-storyboardTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +481,7 @@
 				84F0325D188FADBE0051D571 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

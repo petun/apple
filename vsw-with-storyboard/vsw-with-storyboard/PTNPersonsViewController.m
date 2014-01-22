@@ -8,8 +8,10 @@
 
 #import "PTNPersonsViewController.h"
 #import "PTNDetailPersonViewController.h"
+#import "PTNAppDelegate.h"
 
 static NSString * const CellIdentifier = @"CellIdentifier";
+static NSString * const kPlistUrl = @"http://petrmarochkin.ru/ps_flat.binary.plist";
 
 
 @interface PTNPersonsViewController ()
@@ -18,28 +20,100 @@ static NSString * const CellIdentifier = @"CellIdentifier";
 
 @implementation PTNPersonsViewController {
     NSMutableArray *filteredPersons;
-    UISearchDisplayController *searchController;
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"ps.binary" ofType:@"plist"];
-        self.persons = [[NSDictionary alloc] initWithContentsOfFile:path];
-        
-        self.keys = [[self.persons allKeys] sortedArrayUsingSelector:@selector(compare:)];
-        // Custom initialization
-        
         filteredPersons = [NSMutableArray new];
+        self.appDelegate = [UIApplication sharedApplication].delegate;
+        
     }
     return self;
+}
+
+// path for directory
+-(NSString *)pathForPlist {
+    NSArray *paths =  NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docFolder = paths[0];
+    return [docFolder stringByAppendingPathComponent:@"persons.plist"];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-      
+    
+    
+    // load file and init table
+    // если нет файла - пытаемся загрузить из сети его
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[self pathForPlist]]) {
+        NSLog(@"Start downloading plist from %@",kPlistUrl);
+        
+        NSURL *url = [[NSURL alloc] initWithString:kPlistUrl];
+        
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Загрузка справочника" message:@"Немного подождите..." delegate:self cancelButtonTitle:@"Закрыть" otherButtonTitles:nil];
+        [alert show];
+        
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            // тут нужен отдельный поток
+            NSData *data = [[NSData alloc] initWithContentsOfURL:url];
+            //
+            
+            if (data != nil) {
+                [data writeToFile:[self pathForPlist] atomically:YES];
+                
+                //
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [alert dismissWithClickedButtonIndex:0 animated:YES];
+                    [self loadPlistToApp];
+                });
+                
+            } else {
+                NSLog(@"Failed to download catalog file...  exit");
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [alert setMessage:@"Ошибка при загрузке каталога, проверте, если у вас доступ до корпоративной сети ОМК."];
+                });
+            }
+        });
+        
+    } else {
+        [self loadPlistToApp];
+    }
 }
+
+-(void)loadPlistToApp {
+    // второй метод загрузки списка - сортировку делаем уже на месте
+    // грузим плоский список сотрудникоффф
+    self.appDelegate.allPersons = [[NSArray alloc] initWithContentsOfFile:[self pathForPlist]];
+    self.appDelegate.allDepartments = [[NSMutableDictionary alloc] init];
+    
+    self.persons = [[NSMutableDictionary alloc] init];
+    for (NSDictionary *dict in self.appDelegate.allPersons) {
+        // add persons
+        NSString *firstLetter = [dict[@"NACHN"] substringToIndex:1];
+        
+        if (self.persons[firstLetter] == nil) {
+            [self.persons setValue:[NSMutableArray array] forKey:firstLetter];
+        }
+        
+        [self.persons[firstLetter] addObject:dict];
+        
+        // add departments
+        NSString *departmenrNumber = dict[@"ORGEH"];
+        
+        if (self.appDelegate.allDepartments[departmenrNumber] == nil) {
+            [self.appDelegate.allDepartments setValue:dict[@"ORGEH_TXT"] forKey:departmenrNumber];
+        }
+    }
+    
+    self.keys = [[self.persons allKeys] sortedArrayUsingSelector:@selector(compare:)];
+    
+    [self.tableView reloadData];
+    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -71,10 +145,6 @@ static NSString * const CellIdentifier = @"CellIdentifier";
             [filteredPersons addObjectsFromArray:mathes];
            
         }
-        
-        
-       
-        
         //NSLog(@"Found filtered persons - %i",[filteredPersons count]);
     }
     
@@ -149,25 +219,6 @@ static NSString * const CellIdentifier = @"CellIdentifier";
     }
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    /*NSMutableDictionary *person = [[NSMutableDictionary alloc] init];
-    
-    if (tableView.tag == 1) {
-        NSString *cKey = self.keys[indexPath.section];
-        NSArray *persons = self.persons[cKey];
-        [person setDictionary:persons[indexPath.row]];
-        
-    } else {
-        [person setDictionary:filteredPersons[indexPath.row]];
-    }
-    
-    PTNDetailPersonViewController *personController = [[PTNDetailPersonViewController alloc] initWithStyle:UITableViewStylePlain];
-    
-    personController.person = person;
-    
-    [self.navigationController pushViewController:personController animated:YES];*/
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSLog(@"prepare %@",segue.identifier);
@@ -184,12 +235,15 @@ static NSString * const CellIdentifier = @"CellIdentifier";
     }
     
 
-    
     PTNDetailPersonViewController *dest = segue.destinationViewController;
     dest.person = person;
     
-    // Get the new view controller using .
-    // Pass the selected object to the new view controller.
+}
+
+
+#pragma mark AlertView
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    NSLog(@"Fuck");
 }
 
 
