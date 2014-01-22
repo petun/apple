@@ -29,6 +29,9 @@
 		84F0317B188E98E80051D571 /* PTNAdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F0317A188E98E80051D571 /* PTNAdCell.m */; };
 		84F0317D188E99120051D571 /* PTNAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F0317C188E99120051D571 /* PTNAdCell.xib */; };
 		84F0317F188E9D120051D571 /* ads.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84F0317E188E9D120051D571 /* ads.plist */; };
+		84F03182188F7C150051D571 /* PTNtestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F03181188F7C150051D571 /* PTNtestCell.m */; };
+		84F03184188F82180051D571 /* ps.xml.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84F03183188F82180051D571 /* ps.xml.plist */; };
+		84F03188188F88680051D571 /* ps.binary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84F03187188F88680051D571 /* ps.binary.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,10 @@
 		84F0317A188E98E80051D571 /* PTNAdCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNAdCell.m; sourceTree = "<group>"; };
 		84F0317C188E99120051D571 /* PTNAdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTNAdCell.xib; sourceTree = "<group>"; };
 		84F0317E188E9D120051D571 /* ads.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ads.plist; sourceTree = "<group>"; };
+		84F03180188F7C150051D571 /* PTNtestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTNtestCell.h; sourceTree = "<group>"; };
+		84F03181188F7C150051D571 /* PTNtestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNtestCell.m; sourceTree = "<group>"; };
+		84F03183188F82180051D571 /* ps.xml.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ps.xml.plist; sourceTree = "<group>"; };
+		84F03187188F88680051D571 /* ps.binary.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ps.binary.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +138,8 @@
 		84F03144188E8B360051D571 /* vksorg */ = {
 			isa = PBXGroup;
 			children = (
+				84F03187188F88680051D571 /* ps.binary.plist */,
+				84F03183188F82180051D571 /* ps.xml.plist */,
 				84F03172188E8BDF0051D571 /* sections.plist */,
 				84F0314D188E8B360051D571 /* PTNAppDelegate.h */,
 				84F0314E188E8B360051D571 /* PTNAppDelegate.m */,
@@ -149,6 +158,8 @@
 				1937C465188EF81B0055C11C /* PTNAdDetailViewController.h */,
 				1937C466188EF81B0055C11C /* PTNAdDetailViewController.m */,
 				1937C467188EF81B0055C11C /* PTNAdDetailViewController.xib */,
+				84F03180188F7C150051D571 /* PTNtestCell.h */,
+				84F03181188F7C150051D571 /* PTNtestCell.m */,
 			);
 			path = vksorg;
 			sourceTree = "<group>";
@@ -261,9 +272,11 @@
 				84F03173188E8BDF0051D571 /* sections.plist in Resources */,
 				84F03171188E8B4B0051D571 /* PTNSectionViewController.xib in Resources */,
 				84F03178188E98C30051D571 /* PTNAdViewController.xib in Resources */,
+				84F03188188F88680051D571 /* ps.binary.plist in Resources */,
 				84F0317D188E99120051D571 /* PTNAdCell.xib in Resources */,
 				84F0317F188E9D120051D571 /* ads.plist in Resources */,
 				84F03149188E8B360051D571 /* InfoPlist.strings in Resources */,
+				84F03184188F82180051D571 /* ps.xml.plist in Resources */,
 				84F03151188E8B360051D571 /* Images.xcassets in Resources */,
 				1937C469188EF81B0055C11C /* PTNAdDetailViewController.xib in Resources */,
 			);
@@ -284,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F03182188F7C150051D571 /* PTNtestCell.m in Sources */,
 				84F0317B188E98E80051D571 /* PTNAdCell.m in Sources */,
 				1937C468188EF81B0055C11C /* PTNAdDetailViewController.m in Sources */,
 				84F0314B188E8B360051D571 /* main.m in Sources */,

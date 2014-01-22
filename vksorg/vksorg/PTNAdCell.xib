@@ -13,7 +13,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AIR-Au-e49">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AIR-Au-e49">
                         <rect key="frame" x="8" y="18" width="76" height="76"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <constraints>
@@ -21,14 +21,14 @@
                             <constraint firstAttribute="height" constant="76" id="bmJ-UR-GI2"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Продаю автомобиль б/у Hyundai Elantra, 2009 г." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="208" translatesAutoresizingMaskIntoConstraints="NO" id="X9G-Cy-c0H">
-                        <rect key="frame" x="92" y="9" width="208" height="35"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Продаю автомобиль б/у Hyundai Elantra, 2009 г." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="208" translatesAutoresizingMaskIntoConstraints="NO" id="X9G-Cy-c0H">
+                        <rect key="frame" x="92" y="9" width="208" height="33"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="850 000 руб." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9E-Jc-n5z">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="850 000 руб." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9E-Jc-n5z">
                         <rect key="frame" x="92" y="45" width="208" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -42,7 +42,7 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="г. Выкса" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHZ-CL-R3q">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="г. Выкса" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHZ-CL-R3q">
                         <rect key="frame" x="92" y="82" width="208" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -50,6 +50,15 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="X9G-Cy-c0H" firstAttribute="top" secondItem="nIF-1S-OfI" secondAttribute="top" constant="9" id="2ko-qe-vAj"/>
+                    <constraint firstAttribute="trailing" secondItem="X9G-Cy-c0H" secondAttribute="trailing" constant="20" id="Fer-oY-55v"/>
+                    <constraint firstItem="VHZ-CL-R3q" firstAttribute="leading" secondItem="AIR-Au-e49" secondAttribute="trailing" constant="8" id="GUj-he-7ZO"/>
+                    <constraint firstItem="AIR-Au-e49" firstAttribute="top" secondItem="nIF-1S-OfI" secondAttribute="top" constant="18" id="YUc-WD-Z6a"/>
+                    <constraint firstItem="e9E-Jc-n5z" firstAttribute="top" secondItem="X9G-Cy-c0H" secondAttribute="bottom" constant="3" id="afN-7E-tMH"/>
+                    <constraint firstItem="X9G-Cy-c0H" firstAttribute="leading" secondItem="AIR-Au-e49" secondAttribute="trailing" constant="8" id="mGv-AP-eeS"/>
+                    <constraint firstItem="AIR-Au-e49" firstAttribute="leading" secondItem="nIF-1S-OfI" secondAttribute="leading" constant="8" id="mez-62-Zeu"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="dateLabel" destination="ok9-aK-mB9" id="WDs-Aw-ioI"/>

@@ -19,6 +19,16 @@
     return self;
 }
 
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
+    [super setSelected:selected animated:animated];
+    
+    // Configure the view for the selected state
+    
+
+}
+
+
 -(void)setAd:(NSDictionary *)ad {
     _ad = ad;
     self.titleLabel.text = _ad[@"title"];
@@ -35,10 +45,25 @@
         self.extraLabel.text = _ad[@"town"];
     }
     
-    UIImage *image  = [[UIImage alloc] initWithData:[[NSData alloc] initWithContentsOfURL:[[NSURL alloc] initWithString:_ad[@"thumb"] ]]];
+    // load image in additional thread
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        UIImage *image  = [[UIImage alloc] initWithData:[[NSData alloc] initWithContentsOfURL:[[NSURL alloc] initWithString:_ad[@"thumb"] ]]];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.imageView.image = image;
+            //    self.imageView.contentMode =UIViewContentModeScaleToFill;
+            self.imageView.contentMode =UIViewContentModeScaleAspectFit;
+            //    self.imageView.contentMode =UIViewContentModeScaleAspectFill;
+            
+            [self setNeedsLayout];
+
+        });
+        
+    });
     
     
-    self.imageView.image = image;
+    
 }
 
 @end
