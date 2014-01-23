@@ -10,8 +10,20 @@
 #import "PTNDetailPersonViewController.h"
 #import "PTNAppDelegate.h"
 
+#import "Reachability.h"
+#import <SystemConfiguration/SystemConfiguration.h>
+
 static NSString * const CellIdentifier = @"CellIdentifier";
-static NSString * const kPlistUrl = @"http://petrmarochkin.ru/ps_flat.binary.plist";
+
+// url до справочника
+static NSString * const kPlistUrl = @"http://ps-devel-w334598178.omk-it.ru/netcat/modules/default/ps_flat.binary.plist";
+// url до версии
+static NSString * const kPlistUrlVersion = @"http://ps-devel-w334598178.omk-it.ru/netcat/modules/default/ps_flat.binary.version.plist";
+static NSString * const kReachabilityHost = @"ps-devel-w334598178.omk-it.ru";
+
+
+static NSString * const kDateKey = @"last_date";
+
 
 
 @interface PTNPersonsViewController ()
@@ -28,6 +40,9 @@ static NSString * const kPlistUrl = @"http://petrmarochkin.ru/ps_flat.binary.pli
         filteredPersons = [NSMutableArray new];
         self.appDelegate = [UIApplication sharedApplication].delegate;
         
+        // reset date
+        [[NSUserDefaults standardUserDefaults] setValue:nil forKey:kDateKey];
+        
     }
     return self;
 }
@@ -39,48 +54,87 @@ static NSString * const kPlistUrl = @"http://petrmarochkin.ru/ps_flat.binary.pli
     return [docFolder stringByAppendingPathComponent:@"persons.plist"];
 }
 
+// test internet connection
+- (BOOL)connected
+{
+    Reachability* reachability = [Reachability reachabilityWithHostName:kReachabilityHost];
+    NetworkStatus networkStatus = [reachability currentReachabilityStatus];
+    return networkStatus != NotReachable;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Загрузка справочника" message:@"Проверка соединения..." delegate:self cancelButtonTitle:@"Закрыть" otherButtonTitles:nil];
+    [alert show];
     
-    // load file and init table
-    // если нет файла - пытаемся загрузить из сети его
-    if (![[NSFileManager defaultManager] fileExistsAtPath:[self pathForPlist]]) {
-        NSLog(@"Start downloading plist from %@",kPlistUrl);
-        
-        NSURL *url = [[NSURL alloc] initWithString:kPlistUrl];
-        
-        
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Загрузка справочника" message:@"Немного подождите..." delegate:self cancelButtonTitle:@"Закрыть" otherButtonTitles:nil];
-        [alert show];
-        
-        
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            // тут нужен отдельный поток
-            NSData *data = [[NSData alloc] initWithContentsOfURL:url];
-            //
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // если есть инет - проверяем версию и далее если новая скачиваем ее
+        if ([self connected]) {
             
-            if (data != nil) {
-                [data writeToFile:[self pathForPlist] atomically:YES];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [alert setMessage:@"Проверка новой версии..."];
+            });
+            // есил есть новая версия  - качаем
+            if ([self isNewVersionAvailable]) {
                 
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [alert setMessage:@"Загрузка новой версии..."];
+                });
+
+                // тут нужен отдельный поток
+                NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:kPlistUrl]];
                 //
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [alert dismissWithClickedButtonIndex:0 animated:YES];
-                    [self loadPlistToApp];
-                });
                 
-            } else {
-                NSLog(@"Failed to download catalog file...  exit");
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [alert setMessage:@"Ошибка при загрузке каталога, проверте, если у вас доступ до корпоративной сети ОМК."];
-                });
+                // если данные слили сохраняем
+                if (data != nil) {
+                    if ([data writeToFile:[self pathForPlist] atomically:YES]) {
+                        // update version to new
+                        [self updateVersion];
+                    }
+                }
             }
-        });
+        }
+        // если справочник есть - используем его просто
+        if ([[NSFileManager defaultManager] fileExistsAtPath:[self pathForPlist]]) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [alert dismissWithClickedButtonIndex:0 animated:YES];
+                [self loadPlistToApp];
+            });
+        } else {
+            // выводим сообщение о том что нет инета и нет справочника.. - exit
+            NSLog(@"Failed to download catalog file...  exit");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [alert setMessage:@"Ошибка при загрузке каталога, проверте, если у вас доступ до корпоративной сети ОМК."];
+            });
+        }
+    });
+}
+
+-(BOOL)isNewVersionAvailable {
+    
+    if ([self connected]) {
+        NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfURL:[NSURL URLWithString:kPlistUrlVersion]];
+        NSDate *serverDate = dict[kDateKey];
+        if (serverDate != nil) {
+            NSDate *currentDate = [[NSUserDefaults standardUserDefaults] valueForKey:kDateKey];
+            
+            if (currentDate == nil || [currentDate compare:serverDate] != NSOrderedSame) {
+                return YES;
+            }
+        }
         
-    } else {
-        [self loadPlistToApp];
     }
+    return NO;
+}
+
+-(void)updateVersion {
+    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfURL:[NSURL URLWithString:kPlistUrlVersion]];
+    NSDate *serverDate = dict[kDateKey];
+    [[NSUserDefaults standardUserDefaults] setValue:[serverDate descriptionWithLocale:[NSLocale currentLocale]]  forKey:@"version"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 -(void)loadPlistToApp {

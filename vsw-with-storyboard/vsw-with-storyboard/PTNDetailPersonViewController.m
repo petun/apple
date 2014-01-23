@@ -41,6 +41,27 @@
     self.mobTelLabel.text = self.person[@"MTELL"];
 }
 
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    // telephone calls
+    if (cell.tag == 100) {
+        NSString *number = cell.detailTextLabel.text;
+        if (![number isEqualToString:@""]) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"telprompt://%@",number]]];
+        }
+    }
+    
+    // send mail
+    if (cell.tag == 105) {
+        NSString *email = cell.detailTextLabel.text;
+        if (![email isEqualToString:@""]) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"mailto:%@",email]]];
+        }
+    }
+}
+
+
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
