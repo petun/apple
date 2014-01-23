@@ -27,6 +27,7 @@
 		84F032791890E46F0051D571 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 84F032781890E46F0051D571 /* Settings.bundle */; };
 		84F0327B1890E9620051D571 /* phone1-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F0327A1890E9620051D571 /* phone1-25.png */; };
 		84F0327D1890E9930051D571 /* phone1-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F0327C1890E9930051D571 /* phone1-50.png */; };
+		84F0328218913BA00051D571 /* nophoto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84F0328118913BA00051D571 /* nophoto.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		84F032781890E46F0051D571 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		84F0327A1890E9620051D571 /* phone1-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone1-25.png"; sourceTree = "<group>"; };
 		84F0327C1890E9930051D571 /* phone1-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone1-50.png"; sourceTree = "<group>"; };
+		84F0328118913BA00051D571 /* nophoto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nophoto.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 		84F0327E1890F25C0051D571 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				84F0328118913BA00051D571 /* nophoto.jpg */,
 				84F0327C1890E9930051D571 /* phone1-50.png */,
 				84F0327A1890E9620051D571 /* phone1-25.png */,
 			);
@@ -272,6 +275,7 @@
 				84F0327D1890E9930051D571 /* phone1-50.png in Resources */,
 				84F0323A188FADBD0051D571 /* InfoPlist.strings in Resources */,
 				84F03242188FADBD0051D571 /* Images.xcassets in Resources */,
+				84F0328218913BA00051D571 /* nophoto.jpg in Resources */,
 				84F032791890E46F0051D571 /* Settings.bundle in Resources */,
 				84F0327B1890E9620051D571 /* phone1-25.png in Resources */,
 			);

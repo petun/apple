@@ -21,5 +21,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *emailLabel;
 @property (weak, nonatomic) IBOutlet UILabel *mobTelLabel;
 
+@property (weak, nonatomic) IBOutlet UIImageView *personPhoto;
+
+
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loader;
+
 
 @end

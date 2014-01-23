@@ -9,13 +9,13 @@
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "omk-logo_40.png",
+      "filename" : "omk-logo_80.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "omk-logo_60.png",
+      "filename" : "omk-logo_120.png",
       "scale" : "2x"
     }
   ],

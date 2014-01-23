@@ -9,6 +9,7 @@
 #import "PTNDetailPersonViewController.h"
 #import "PTNDepartmentDetailViewController.h"
 #import <AddressBook/AddressBook.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface PTNDetailPersonViewController ()
 
@@ -40,7 +41,35 @@
     self.telephoneLabel.text = self.person[@"TEL01"];
     self.emailLabel.text = self.person[@"MAIL"];
     self.mobTelLabel.text = self.person[@"MTELL"];
+    
+    [self.loader startAnimating];
+    
+    [self.personPhoto.layer setBorderColor: [[UIColor lightGrayColor] CGColor]];
+    [self.personPhoto.layer setBorderWidth: 0.5];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSString *personUrl = [NSString stringWithFormat:@"http://webstat.vsw.ru:85/photos/300x400/%@.jpg",self.person[@"PERNR"]];
+        
+        NSData *data =[NSData dataWithContentsOfURL:[NSURL URLWithString:personUrl]];
+        
+        UIImage *image;
+        if (data != nil) {
+            image = [[UIImage alloc] initWithData:data];
+        } else {
+            NSString *nophoto = [[NSBundle mainBundle] pathForResource:@"nophoto" ofType:@"jpg"];
+            image = [[UIImage alloc] initWithContentsOfFile:nophoto];
+        }
+        
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.personPhoto.image = image;
+            [self.loader stopAnimating];
+
+        });
+    });    
+    
 }
+
 
 -(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];

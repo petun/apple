@@ -138,6 +138,7 @@ static NSString * const kDateKey = @"last_date";
         }
         
     }
+    
     return NO;
 }
 
