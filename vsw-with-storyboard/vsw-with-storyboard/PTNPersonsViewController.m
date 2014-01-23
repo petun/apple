@@ -17,7 +17,7 @@ static NSString * const CellIdentifier = @"CellIdentifier";
 
 // url до справочника
 static NSString * const kPlistUrl = @"http://ps-devel-w334598178.omk-it.ru/netcat/modules/default/ps_flat.binary.plist";
-// url до версии
+// url до версиик
 static NSString * const kPlistUrlVersion = @"http://ps-devel-w334598178.omk-it.ru/netcat/modules/default/ps_flat.binary.version.plist";
 static NSString * const kReachabilityHost = @"ps-devel-w334598178.omk-it.ru";
 
@@ -40,8 +40,8 @@ static NSString * const kDateKey = @"last_date";
         filteredPersons = [NSMutableArray new];
         self.appDelegate = [UIApplication sharedApplication].delegate;
         
-        // reset date
-        [[NSUserDefaults standardUserDefaults] setValue:nil forKey:kDateKey];
+        // reset date - tmp
+        //[[NSUserDefaults standardUserDefaults] setValue:nil forKey:kDateKey];
         
     }
     return self;
@@ -74,11 +74,15 @@ static NSString * const kDateKey = @"last_date";
         // если есть инет - проверяем версию и далее если новая скачиваем ее
         if ([self connected]) {
             
+            NSLog(@"Connection to %@ OK",kReachabilityHost);
+            
             dispatch_async(dispatch_get_main_queue(), ^{
                 [alert setMessage:@"Проверка новой версии..."];
             });
             // есил есть новая версия  - качаем
             if ([self isNewVersionAvailable]) {
+                
+                NSLog(@"New version is available");
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [alert setMessage:@"Загрузка новой версии..."];
@@ -90,11 +94,16 @@ static NSString * const kDateKey = @"last_date";
                 
                 // если данные слили сохраняем
                 if (data != nil) {
+                    NSLog(@"Save new version to file");
                     if ([data writeToFile:[self pathForPlist] atomically:YES]) {
                         // update version to new
                         [self updateVersion];
                     }
+                } else {
+                    NSLog(@"Failed to fetch data from %@",kPlistUrl);
                 }
+            } else {
+                NSLog(@"Versions are the same.");
             }
         }
         // если справочник есть - используем его просто
@@ -121,6 +130,8 @@ static NSString * const kDateKey = @"last_date";
         if (serverDate != nil) {
             NSDate *currentDate = [[NSUserDefaults standardUserDefaults] valueForKey:kDateKey];
             
+            NSLog(@"Check for new vesion: app: %@ / server: %@",[currentDate description],[serverDate description]);
+            
             if (currentDate == nil || [currentDate compare:serverDate] != NSOrderedSame) {
                 return YES;
             }
@@ -133,7 +144,15 @@ static NSString * const kDateKey = @"last_date";
 -(void)updateVersion {
     NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfURL:[NSURL URLWithString:kPlistUrlVersion]];
     NSDate *serverDate = dict[kDateKey];
+    
+    NSLog(@"Update default version to %@",[serverDate description]);
+    // string representation
     [[NSUserDefaults standardUserDefaults] setValue:[serverDate descriptionWithLocale:[NSLocale currentLocale]]  forKey:@"version"];
+    // date
+    [[NSUserDefaults standardUserDefaults] setValue:serverDate forKey:kDateKey];
+
+    
+    
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
@@ -146,7 +165,7 @@ static NSString * const kDateKey = @"last_date";
     self.persons = [[NSMutableDictionary alloc] init];
     for (NSDictionary *dict in self.appDelegate.allPersons) {
         // add persons
-        NSString *firstLetter = [dict[@"NACHN"] substringToIndex:1];
+        NSString *firstLetter = [dict[@"FIO"] substringToIndex:1];
         
         if (self.persons[firstLetter] == nil) {
             [self.persons setValue:[NSMutableArray array] forKey:firstLetter];
@@ -188,7 +207,7 @@ static NSString * const kDateKey = @"last_date";
         if (self.persons[firstLetter] != nil) {
             
             NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *p, NSDictionary *b){
-                NSString *surname = p[@"NACHN"];
+                NSString *surname = p[@"FIO"];
                 NSRange range = [surname rangeOfString:searchString options:NSCaseInsensitiveSearch];
                 
                 //NSLog(@"%i",range.location);
@@ -248,7 +267,7 @@ static NSString * const kDateKey = @"last_date";
     }
     
     // Configure the cell...
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@ %@", person[@"NACHN"],  person[@"VORNA"], person[@"MIDNM"]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", person[@"FIO"]];
     cell.detailTextLabel.text = person[@"PLANS_TXT"];
     
     cell.tag = indexPath.row;   

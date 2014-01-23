@@ -56,8 +56,8 @@
     
     NSArray *unsortedPersonal = [delegate.allPersons filteredArrayUsingPredicate:predicate];
     self.departmentPersonal = [unsortedPersonal sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-        NSString *first = [obj1 objectForKey:@"NACHN"];
-        NSString *second = [obj2 objectForKey:@"NACHN"];
+        NSString *first = [obj1 objectForKey:@"FIO"];
+        NSString *second = [obj2 objectForKey:@"FIO"];
         
         return [first compare:second];
     }];
@@ -87,7 +87,7 @@
     // Configure the cell...
     NSDictionary *person = self.departmentPersonal[indexPath.row];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@ %@", person[@"NACHN"],  person[@"VORNA"], person[@"MIDNM"]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", person[@"FIO"]];
     cell.detailTextLabel.text = person[@"PLANS_TXT"];
     
     cell.tag = indexPath.row;

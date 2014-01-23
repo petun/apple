@@ -8,6 +8,7 @@
 
 #import "PTNDetailPersonViewController.h"
 #import "PTNDepartmentDetailViewController.h"
+#import <AddressBook/AddressBook.h>
 
 @interface PTNDetailPersonViewController ()
 
@@ -25,7 +26,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    NSString *name = [NSString stringWithFormat:@"%@ %@ %@", self.person[@"NACHN"],  self.person[@"VORNA"], self.person[@"MIDNM"]];
+    NSString *name = [NSString stringWithFormat:@"%@", self.person[@"FIO"]];
     self.title = name;
     
     self.personNameLabel.text = name;
@@ -59,6 +60,37 @@
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"mailto:%@",email]]];
         }
     }
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    /*if (indexPath.section == 0 && indexPath.row == 0) {
+        NSLog(@"Add person to contact list");
+        
+        CFErrorRef err;
+        ABAddressBookRef book = ABAddressBookCreateWithOptions(nil, &err);
+        
+        
+        
+        ABRecordRef person = ABPersonCreate();
+        // Setting basic properties
+        ABRecordSetValue(person, kABPersonFirstNameProperty, @"Ondrej" , nil);
+        ABRecordSetValue(person, kABPersonLastNameProperty, @"Rafaj", nil);
+        ABRecordSetValue(person, kABPersonJobTitleProperty, @"Tech. director", nil);
+        ABRecordSetValue(person, kABPersonDepartmentProperty, @"iPhone development department", nil);
+        ABRecordSetValue(person, kABPersonOrganizationProperty, @"Fuerte international", nil);
+        ABRecordSetValue(person, kABPersonNoteProperty, @"The best iPhone development studio in the UK :)", nil);
+        
+        
+        CFErrorRef addErr;
+        ABAddressBookAddRecord(book,person,&addErr);
+        
+        
+        
+        
+        
+        // addressBook = ABAddressBookCreateWithOptions();
+        //ABRecordRef person = ABPersonCreate();
+    }*/
 }
 
 
